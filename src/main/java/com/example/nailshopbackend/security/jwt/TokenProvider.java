@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 
 
 @Component
-public class TokenProvider{
+public class TokenProvider {
    private final Logger logger = (Logger) LoggerFactory.getLogger(TokenProvider.class);
 
     private static final String AUTHORITIES_KEY = "auth";

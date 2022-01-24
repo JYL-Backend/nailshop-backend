@@ -1,7 +1,7 @@
-package com.example.nailshopbackend.user.entity;
+package com.example.nailshopbackend.common.user.entity;
 
 import com.example.nailshopbackend.common.entity.BaseEntity;
-import com.example.nailshopbackend.userauthority.entity.UserAuthorityEntity;
+import com.example.nailshopbackend.common.userauthority.entity.UserAuthorityEntity;
 import lombok.Getter;
 
 import javax.persistence.*;

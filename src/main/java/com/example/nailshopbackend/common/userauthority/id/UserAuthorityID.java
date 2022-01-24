@@ -1,4 +1,4 @@
-package com.example.nailshopbackend.userauthority.id;
+package com.example.nailshopbackend.common.userauthority.id;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.example.nailshopbackend.authority.entity;
+package com.example.nailshopbackend.common.authority.entity;
 
 import lombok.Getter;
 

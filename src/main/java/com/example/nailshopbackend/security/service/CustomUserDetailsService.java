@@ -1,12 +1,8 @@
 package com.example.nailshopbackend.security.service;
 
 
-import com.example.nailshopbackend.authority.entity.QAuthorityEntity;
 import com.example.nailshopbackend.common.exception.GlobalException;
-import com.example.nailshopbackend.user.entity.QUserEntity;
-import com.example.nailshopbackend.user.entity.UserEntity;
-import com.example.nailshopbackend.user.repository.UserRepository;
-import com.example.nailshopbackend.userauthority.entity.QUserAuthorityEntity;
+import com.example.nailshopbackend.common.user.entity.UserEntity;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,9 +17,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.example.nailshopbackend.authority.entity.QAuthorityEntity.authorityEntity;
-import static com.example.nailshopbackend.user.entity.QUserEntity.userEntity;
-import static com.example.nailshopbackend.userauthority.entity.QUserAuthorityEntity.userAuthorityEntity;
+import static com.example.nailshopbackend.common.authority.entity.QAuthorityEntity.authorityEntity;
+import static com.example.nailshopbackend.common.user.entity.QUserEntity.userEntity;
+import static com.example.nailshopbackend.common.userauthority.entity.QUserAuthorityEntity.userAuthorityEntity;
 
 @Component("userDetailsService")
 @RequiredArgsConstructor
