@@ -1,0 +1,24 @@
+server:
+  address: localhost
+  port: 9616
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    password: 1234
+    url: jdbc:mysql://localhost:3306/nailshop?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
