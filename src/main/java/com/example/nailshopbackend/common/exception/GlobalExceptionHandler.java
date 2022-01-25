@@ -49,7 +49,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({UsernameNotFoundException.class})
     public ResponseEntity<ErrorResponse> UsernameNotFoundException(final UsernameNotFoundException exception){
         System.out.println("Error22 : " + exception.getMessage());
-        return this.makeErrorResponseEntity(401, exception.getMessage());
+        return this.makeErrorResponseEntity(401, ErrorResult.NOT_FOUND_EMAIL.getMessage());
     }
 
         /* 인증 에러*/

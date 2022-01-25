@@ -3,6 +3,7 @@ package com.example.nailshopbackend.dto.request;
 import com.example.nailshopbackend.common.user.entity.UserEntity;
 import com.example.nailshopbackend.common.validation.ValidationGroups;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

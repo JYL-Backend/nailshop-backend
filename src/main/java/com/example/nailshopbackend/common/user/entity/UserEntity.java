@@ -2,10 +2,7 @@ package com.example.nailshopbackend.common.user.entity;
 
 import com.example.nailshopbackend.common.entity.BaseEntity;
 import com.example.nailshopbackend.common.userauthority.entity.UserAuthorityEntity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -25,6 +22,7 @@ public class UserEntity extends BaseEntity {
     private String phoneNumber;
 
     @Column(name = "password")
+    @Setter
     private String password;
 
     @Column(name = "name")

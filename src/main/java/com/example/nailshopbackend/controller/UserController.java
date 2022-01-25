@@ -1,7 +1,9 @@
 package com.example.nailshopbackend.controller;
 
 import com.example.nailshopbackend.common.validation.ValidationGroups;
+import com.example.nailshopbackend.dto.request.RequestLoginDTO;
 import com.example.nailshopbackend.dto.request.RequestRegisterDTO;
+import com.example.nailshopbackend.security.dto.TokenDTO;
 import com.example.nailshopbackend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -34,5 +36,17 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody @Validated(ValidationGroups.Insert.class) RequestRegisterDTO dto){
         return ResponseEntity.ok().body(userService.register(dto));
+    }
+
+    /**
+     * @작성일 : 2022-01-25
+     * @작성자 : jylim
+     * @변경이력 :
+     * @Method 설명 : 로그인
+     * return
+    */
+    @PostMapping("/login")
+    public ResponseEntity<TokenDTO> login(@RequestBody RequestLoginDTO dto){
+        return ResponseEntity.ok().body(userService.login(dto));
     }
 }

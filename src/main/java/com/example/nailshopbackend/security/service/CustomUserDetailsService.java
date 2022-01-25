@@ -30,7 +30,7 @@ public class CustomUserDetailsService  implements UserDetailsService {
             @Override
             public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
             List<UserEntity> result = queryFactory.select(userEntity).from(userEntity)
-                    .leftJoin(userEntity, userAuthorityEntity.user).fetchJoin()
+                    .leftJoin(userEntity.authorities, userAuthorityEntity).fetchJoin()
                     .leftJoin(userAuthorityEntity.authority, authorityEntity).fetchJoin()
                     .where(userEntity.email.eq(username)).fetch();
                 if(result.isEmpty()){

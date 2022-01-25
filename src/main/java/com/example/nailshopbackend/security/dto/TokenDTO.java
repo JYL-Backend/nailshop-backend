@@ -10,4 +10,5 @@ public class TokenDTO {
     String accessToken;
     long accessTokenExpiresIn;
     String refreshToken;
+    long refreshTokenExpiresIn;
 }
