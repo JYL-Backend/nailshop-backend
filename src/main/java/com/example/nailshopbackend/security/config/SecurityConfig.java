@@ -61,10 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //권한 설정
                 .and()
                 .authorizeRequests()
-                .antMatchers("/api/login").permitAll()
-                .antMatchers("/api/signup").permitAll()
-                .antMatchers("/api/reissue").permitAll()
-                .antMatchers("/user/all").permitAll()
+                .antMatchers("/register").permitAll()
                 .antMatchers("/user/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()
 

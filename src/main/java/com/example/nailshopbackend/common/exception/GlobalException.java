@@ -11,4 +11,8 @@ public class GlobalException extends RuntimeException{
     private final HttpStatus httpStatus;
     private final String errorMsg;
 
+    public GlobalException(ErrorResult errorResult){
+        this.httpStatus = errorResult.getHttpStatus();
+        this.errorMsg = errorResult.getMessage();
+    }
 }

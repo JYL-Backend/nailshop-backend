@@ -3,7 +3,10 @@ package com.example.nailshopbackend.common.userauthority.entity;
 import com.example.nailshopbackend.common.authority.entity.AuthorityEntity;
 import com.example.nailshopbackend.common.user.entity.UserEntity;
 import com.example.nailshopbackend.common.userauthority.id.UserAuthorityID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -11,6 +14,9 @@ import javax.persistence.*;
 @Getter
 @Table(name = "user_authority")
 @IdClass(UserAuthorityID.class)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserAuthorityEntity {
     @Id
     @ManyToOne(fetch = FetchType.LAZY)
